@@ -1,0 +1,75 @@
+{% extends "index.html" %}
+{% block content %}
+<!-- Write code indside this block -->
+<style>
+    .required:after {
+        content: " *";
+        color: red;
+    }
+</style>
+
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <h3 style="color: black;">Update Customer Details</h3><br><br>
+    </div>
+    <form>
+        <div class="form-group row">
+            <label for="SSNId" class="col-sm-2 col-form-label text-body ">Customer SSN ID</label>
+            <div class="col-sm-10">
+                <label style="color:red;">FETCH FROM DB and DISPLAY HERE</label>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label text-body ">Customer Name</label>
+            <div class="col-sm-10">
+                <label style="color:red;">FETCH FROM DB and DISPLAY HERE</label>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label text-body ">Old Customer Name</label>
+            <div class="col-sm-10">
+                <label style="color:red;">FETCH FROM DB and DISPLAY HERE</label>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="name" class="col-sm-2 col-form-label text-body required">New Customer Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="eg. John Doe" required maxlength=50>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label text-body ">Old Address</label>
+            <div class="col-sm-10">
+                <label style="color:red;">FETCH FROM DB and DISPLAY HERE</label>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="address" class="col-sm-2 col-form-label text-body required">New Address</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="eg. Fort, Mumbai" required maxlength=200>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label text-body ">Old Age</label>
+            <div class="col-sm-10">
+                <label style="color:red;">FETCH FROM DB and DISPLAY HERE</label>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="age" class="col-sm-2 col-form-label text-body required">New Age</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" placeholder="eg. 21" required maxlength=3>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-12 offset-sm-6">
+                <label style="color:red" ;>(*) Fields are compulsory</label>
+                <button type="submit" class="btn btn-primary">Update</button>
+                <button type="reset" class="btn btn-primary">Reset</button>
+
+            </div>
+        </div>
+    </form>
+
+</div>
+{% endblock %}

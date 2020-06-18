@@ -12,61 +12,66 @@
     <div class="row d-flex justify-content-center">
         <h3 style="color: black;">Update Customer Details</h3><br><br>
     </div>
-    <form>
+    <form action="" method="post"> 
         <div class="form-group row">
             <label for="SSNId" class="col-sm-2 col-form-label text-body ">Customer SSN ID</label>
             <div class="col-sm-10">
-                <label style="color:red;">FETCH FROM DB and DISPLAY HERE</label>
+                <input type="number" name="ssn" class="form-control" value="{{ssn}}"  maxlength=9>
+                <!-- <label style="color:blue;">{{ssn}}</label> -->
             </div>
         </div>
         <div class="form-group row">
-            <label class="col-sm-2 col-form-label text-body ">Customer Name</label>
+            <label class="col-sm-2 col-form-label text-body ">Customer ID</label>
             <div class="col-sm-10">
-                <label style="color:red;">FETCH FROM DB and DISPLAY HERE</label>
+                <input type="number" name="cid" class="form-control" value="{{cid}}" maxlength=9>
+                <!-- <label style="color:blue;">{{cid}}</label>  -->
             </div>
         </div>
         <div class="form-group row">
             <label class="col-sm-2 col-form-label text-body ">Old Customer Name</label>
             <div class="col-sm-10">
-                <label style="color:red;">FETCH FROM DB and DISPLAY HERE</label>
+                <label style="color:blue;">{{name}}</label>
             </div>
         </div>
         <div class="form-group row">
-            <label for="name" class="col-sm-2 col-form-label text-body required">New Customer Name</label>
+            <label for="name" class="col-sm-2 col-form-label text-body ">New Customer Name</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" placeholder="eg. John Doe" required maxlength=50>
+                <input type="text" name="newName" class="form-control" placeholder="eg. John Doe" maxlength=50>
             </div>
         </div>
         <div class="form-group row">
             <label class="col-sm-2 col-form-label text-body ">Old Address</label>
             <div class="col-sm-10">
-                <label style="color:red;">FETCH FROM DB and DISPLAY HERE</label>
+                <label style="color:blue;">{{oldAddress}}</label>
             </div>
         </div>
         <div class="form-group row">
-            <label for="address" class="col-sm-2 col-form-label text-body required">New Address</label>
+            <label for="address" class="col-sm-2 col-form-label text-body ">New Address</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" placeholder="eg. Fort, Mumbai" required maxlength=200>
+                <input type="text" name="newAddress" class="form-control" placeholder="eg. Fort, Mumbai" maxlength=200>
             </div>
         </div>
         <div class="form-group row">
             <label class="col-sm-2 col-form-label text-body ">Old Age</label>
             <div class="col-sm-10">
-                <label style="color:red;">FETCH FROM DB and DISPLAY HERE</label>
+                <label style="color:blue;">{{age}}</label>
             </div>
         </div>
         <div class="form-group row">
-            <label for="age" class="col-sm-2 col-form-label text-body required">New Age</label>
+            <label for="age" class="col-sm-2 col-form-label text-body ">New Age</label>
             <div class="col-sm-10">
-                <input type="number" class="form-control" placeholder="eg. 21" required maxlength=3>
+                <input type="number" name="newAge" class="form-control" placeholder="eg. 21" maxlength=3>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-12 offset-sm-2 msg">
+                <label style="color:blue">{{ msg }}</label>
             </div>
         </div>
         <div class="form-group row">
             <div class="col-sm-12 offset-sm-6">
                 <label style="color:red" ;>(*) Fields are compulsory</label>
-                <button type="submit" class="btn btn-primary">Update</button>
-                <button type="reset" class="btn btn-primary">Reset</button>
-
+                <button type="submit" value="submit" class="btn btn-primary">Update</button>
             </div>
         </div>
     </form>

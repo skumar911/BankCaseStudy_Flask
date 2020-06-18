@@ -43,9 +43,9 @@
                     </div>
                 </div>
             </div>
-            {% if c_login %}
+            {% if session['c_login'] %}
             {% include "includes/c_nav.html" %}
-            {% elif e_login %}
+            {% elif session['e_login'] %}
             {% include "includes/e_nav.html" %}
             {% endif %}
             {% block content %}

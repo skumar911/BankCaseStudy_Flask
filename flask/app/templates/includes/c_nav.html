@@ -4,15 +4,16 @@
 
 
             <div class="site-logo">
-                <a href="{{url_for('index')}}" class="text-black"><span class="text-primary">ESKAY BANK</a>
+                <a href="{{url_for('welcome')}}" class="text-black"><span class="text-primary">ESKAY BANK</a>
             </div>
 
             <div class="col-12">
                 <nav class="site-navigation text-right ml-auto " role="navigation">
 
                     <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
-                        <li><a href="{{url_for('index')}}" class="nav-link">Home</a></li>
-                        <li class="has-children">
+                        <li><a href="{{url_for('welcome')}}" class="nav-link">Home</a></li>
+                        <li><a href="{{url_for('aSearch')}}" class="nav-link">Account Details</a></li>
+                        <!-- <li class="has-children">
                             <a href="#" class="nav-link">Transactions</a>
                             <ul class="dropdown arrow-top">
                                 <li><a href="{{url_for('deposit')}}" class="nav-link">Deposit</a></li>
@@ -20,7 +21,7 @@
                                 </li>
                                 <li><a href="{{url_for('transfer')}}" class="nav-link">Fund Transfer</a></li>
                             </ul>
-                        </li>
+                        </li> -->
                         <li class="has-children">
                             <a href="#" class="nav-link">Account Statement</a>
                             <ul class="dropdown arrow-top">
@@ -29,7 +30,6 @@
                             </ul>
                         </li>
 
-                        <li><a href="{{url_for('aSearch')}}" class="nav-link">Search Account</a></li>
                         <li><a href="{{url_for('logout')}}" class="nav-link">Logout</a></li>
 
                     </ul>

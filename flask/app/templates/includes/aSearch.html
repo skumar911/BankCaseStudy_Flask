@@ -1,5 +1,62 @@
 {% extends "index.html" %}
 {% block content %}
 <!-- Write code indside this block -->
+<style>
+    .required:after {
+        content: " *";
+        color: red;
+    }
+</style>
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <h3 style="color: black;">Get Account Details</h3><br><br>
+    </div>
+    <form action="" method="post">
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label text-body">Account ID</label>
+            <div class="col-sm-10">
+                <input type="text" name="aid" class="form-control" value="{{aid}}" maxlength=9>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label text-body">Customer ID</label>
+            <div class="col-sm-10">
+                <input type="text" name="cid" class="form-control" value="{{cid}}" maxlength=9>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label text-body ">Account Type</label>
+            <div class="col-sm-10">
+                <label style="color: blue;">{{accnt_type}}</label>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label text-body ">Balance</label>
+            <div class="col-sm-10">
+                <label style="color: blue;">{{balance}}</label>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-12 offset-sm-2 msg">
+                <label style="color:blue">{{ msg }}</label>
+            </div>
+        </div>
+        {% if not found %}
+        <div class="form-group row">
+            <div class="col-sm-12 offset-sm-6">
+                <button type="submit" value="submit" class="btn btn-primary">SEARCH</button>
+            </div>
+        </div>
+        {% else %}
+        <div class="form-group row">
+            <div class="col-sm-12 offset-sm-6">
+                <a href="{{url_for('deposit')}}" class="button btn btn-primary">DEPOSIT</a>
+                <a href="{{url_for('withdraw')}}" class="button btn btn-primary">WITHDRAW</a>
+                <a href="{{url_for('transfer')}}" class="button btn btn-primary">TRANSFER</a>
+            </div>
+        {% endif %}
+        </div>
+    </form>
 
+</div>
 {% endblock %}

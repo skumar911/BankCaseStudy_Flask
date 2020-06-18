@@ -1,5 +1,54 @@
 {% extends "index.html" %}
 {% block content %}
-<!-- Write code indside this block -->
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <h3 style="color: black;">Withdraw</h3><br><br>
+    </div>
+    <form action="" method="post">
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label text-body">Withdraw Amount</label>
+            <div class="col-sm-10">
+                <input type="number" name="amount" min=1 class="form-control" maxlength=15 required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label text-body">Account ID</label>
+            <div class="col-sm-10">
+                <label style="color: blue;">{{aid}}</label>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label text-body ">Balance before withdraw</label>
+            <div class="col-sm-10">
+                <label style="color: blue;">{{balance}}</label>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-12 offset-sm-2 msg">
+                <label style="color:blue">{{ msg }}</label>
+            </div>
+        </div>
+        {% if not done %}
+        <div class="form-group row">
+            <div class="col-sm-12 offset-sm-6">
+                <button type="submit" value="submit" class="btn btn-primary">WITHDRAW</button>
+            </div>
+        </div>
+        {% else %}
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label text-body ">Latest Balance</label>
+            <div class="col-sm-10">
+                <label style="color: blue;">{{latest_bal}}</label>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-12 offset-sm-6">
+                <button type="submit" value="submit" class="btn btn-primary">WITHDRAW MORE</button>
+            </div>
+        </div>
+        {% endif %}
+</div>
+</form>
 
+</div>
 {% endblock %}

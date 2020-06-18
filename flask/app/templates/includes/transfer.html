@@ -1,5 +1,78 @@
 {% extends "index.html" %}
 {% block content %}
-<!-- Write code indside this block -->
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <h3 style="color: black;">Transfer</h3><br><br>
+    </div>
+    <form action="" method="post">
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label text-body">Transfer Amount</label>
+            <div class="col-sm-10">
+                <input type="number" name="amount" min=1 value="{{amount}}" class="form-control" maxlength=15 required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label text-body">Source Account ID</label>
+            <div class="col-sm-10">
+                <input type="number" name="source" min=1 value="{{source}}" class="form-control" maxlength=9 required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label text-body">Target Account ID</label>
+            <div class="col-sm-10">
+                <input type="number" name="target" min=1 value="{{target}}" class="form-control" maxlength=9 required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-4 col-form-label text-body"><b>BALANCE BEFORE TRANSFER</b></label>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label text-body">Source Account</label>
+            <div class="col-sm-10">
+                <label style="color: blue;">{{s_prevBal}}</label>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label text-body">Target Account</label>
+            <div class="col-sm-10">
+                <label style="color: blue;">{{t_prevBal}}</label>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-12 offset-sm-2 msg">
+                <label style="color:blue">{{ msg }}</label>
+            </div>
+        </div>
+        {% if not done %}
+        <div class="form-group row">
+            <div class="col-sm-12 offset-sm-6">
+                <button type="submit" value="submit" class="btn btn-primary">TRANSFER</button>
+            </div>
+        </div>
+        {% else %}
+        <div class="form-group row">
+            <label class="col-sm-4 col-form-label text-body"><b>LATEST BALANCE</b></label>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label text-body">Source Account</label>
+            <div class="col-sm-10">
+                <label style="color: blue;">{{s_curBal}}</label>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label text-body">Target Account</label>
+            <div class="col-sm-10">
+                <label style="color: blue;">{{t_curBal}}</label>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-12 offset-sm-6">
+                <button type="submit" value="submit" class="btn btn-primary">TRANSFER MORE</button>
+            </div>
+        </div>
+        {% endif %}
+</div>
+</form>
 
+</div>
 {% endblock %}
